@@ -1,0 +1,66 @@
+curl --location --request PUT 'http://localhost:9200/products_index' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"mappings" : {
+      "properties" : {
+        "@timestamp" : {
+          "type" : "date"
+        },
+        "@version" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        
+        
+        "name" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "sku" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "description" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        }
+        
+      }
+    },
+    "settings" : {
+      "index" : {
+        "refresh_interval" : "300s",
+        "number_of_shards" : "2",
+        
+        "merge" : {
+          "policy" : {
+            "reclaim_deletes_weight" : "12.0",
+            "deletes_pct_allowed" : "20.0",
+            "max_merged_segment" : "512mb"
+          }
+        },
+        "number_of_replicas" : "1"
+      }
+    }
+  
+}'
