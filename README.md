@@ -26,11 +26,45 @@ http://localhost:5601/
 
 Kafka setup :
 
-Go to <https://kafka.apache.org/quickstart>, download kafka 2.5.0 and untar-it. Next go to ~/Downloads/kafka_2.12-2.5.0 directory and set up a single-node ZooKeeper instance along with multi broker kafka cluster (all on single machine itself) using :
+Go to <https://kafka.apache.org/quickstart>, download kafka 2.5.0 and untar-it. Next go to ~/Downloads/kafka_2.12-2.5.0 directory and do the following to establish a multi broker kafka cluster :
+
+Make a config file for each of the brokers :
 
 ```bash
-http://localhost:9200/
-http://localhost:5601/
+cp config/server.properties config/server-1.properties
+cp config/server.properties config/server-2.properties
+```
+
+edit these new files and set the following properties:
+
+```bash
+config/server-1.properties:
+    broker.id=1
+    listeners=PLAINTEXT://:9093
+    log.dirs=/tmp/kafka-logs-1
+ 
+config/server-2.properties:
+    broker.id=2
+    listeners=PLAINTEXT://:9094
+    log.dirs=/tmp/kafka-logs-2
+```
+
+Now, set up a single-node ZooKeeper instance along with multi broker kafka cluster (all on single machine itself) using the following commands each in a separate tab:
+
+```bash
+bin/zookeeper-server-start.sh config/zookeeper.properties
+
+bin/kafka-server-start.sh config/server.properties
+
+bin/kafka-server-start.sh config/server-1.properties &
+
+bin/kafka-server-start.sh config/server-2.properties &
+```
+
+Create a new topic with partition and replication factor of 3 :
+
+```bash
+bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 3 --partitions 3 --topic my-test-topic
 ```
 
 ## Usage
