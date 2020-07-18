@@ -1,7 +1,6 @@
-curl --location --request POST 'http://localhost:9200/products_index/_search' \
---header 'Content-Type: application/json' \
---data-raw '{
-	"query": {
-		"match_all": {}
-	}
-}'
+GET products_index/_search
+{
+  "query": {
+    "match_all": {}
+  }
+}

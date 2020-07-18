@@ -1,6 +1,5 @@
-curl --location --request PUT 'http://localhost:9200/products_index' \
---header 'Content-Type: application/json' \
---data-raw '{
+PUT products_index
+{
 "mappings" : {
       "properties" : {
         "@timestamp" : {
@@ -63,4 +62,4 @@ curl --location --request PUT 'http://localhost:9200/products_index' \
       }
     }
   
-}'
+}

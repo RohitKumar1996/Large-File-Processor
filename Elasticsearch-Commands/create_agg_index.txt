@@ -1,18 +1,1 @@
-curl --location --request POST 'localhost:9200/_transform/products_transform/_start' \
---header 'Content-Type: application/json' \
---data-raw '{
-  "source": {
-    "index": "products_index"
-  },
-  "dest" : { 
-    "index" : "agg_products_index"
-  },
-  "pivot": {
-    "group_by": { 
-      "name": { "terms": { "field": "name.keyword" }}
-    },
-    "aggregations": {
-      "name_count": { "value_count": { "field": "name.keyword" }}
-    }
-  }
-}'
+POST _transform/products_transform/_start

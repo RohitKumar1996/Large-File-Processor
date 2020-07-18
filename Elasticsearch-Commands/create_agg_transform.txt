@@ -1,6 +1,5 @@
-curl --location --request PUT 'localhost:9200/_transform/products_transform/' \
---header 'Content-Type: application/json' \
---data-raw '{
+PUT _transform/products_transform
+{
   "source": {
     "index": "products_index"
   },
@@ -15,4 +14,4 @@ curl --location --request PUT 'localhost:9200/_transform/products_transform/' \
       "name_count": { "value_count": { "field": "name.keyword" }}
     }
   }
-}'
+}
