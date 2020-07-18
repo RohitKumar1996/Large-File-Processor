@@ -1,0 +1,44 @@
+version: "2"
+services:
+   
+ 
+  # Elasticsearch Docker Image
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.8.0
+    environment:
+            - discovery.type=single-node
+    container_name: elasticsearch
+    # Make a port available to services outside of Docker
+    ports:
+      - 9200:9200
+      - 9300:9300
+    # Configures docker image to run in bridge mode network
+    network_mode: host
+  
+  # Kibana Docker Image
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.8.0
+    container_name: kibana
+    # Make a port available to services outside of Docker
+    ports:
+      - 5601:5601
+    # It Links kibana container & elasticsearch container to communicate
+    # Configures docker image to run in bridge mode network
+    network_mode: host
+    # You can control the order of service startup and shutdown with the depends_on option.
+    depends_on: ['elasticsearch']
+  
+  # Logstash Docker Image
+  logstash:
+    image: docker.elastic.co/logstash/logstash:7.8.0
+    container_name: logstash
+    # It Links elasticsearch container & kafkaserver container  & logstash container to communicate
+    # Configures docker image to run in bridge mode network
+    network_mode: host
+    # You can control the order of service startup and shutdown with the depends_on option.
+    depends_on: ['elasticsearch']
+    # Mount host volumes into docker containers to supply logstash.config file
+    volumes:
+      - '/home/rk/Downloads/logstash-7.8.0/config/docker-logstash/:/usr/share/logstash/pipeline/'
+
+
