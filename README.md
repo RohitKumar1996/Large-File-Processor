@@ -20,8 +20,8 @@ docker-compose up
 
 To validate if the ELK services are up, go to browser and enter :
 ```bash
-http://localhost:9200/
-http://localhost:5601/
+<http://localhost:9200/>
+<http://localhost:5601/>
 ```
 
 Kafka setup :
@@ -76,7 +76,7 @@ Note :
 {IMAGE ID} can be found using the command - "docker images"
 {NAMES} can be found via - "docker ps"
 
-http://localhost:8085/testMyAPI 
+<http://localhost:8085/testMyAPI> 
 
 The response for above URL should be "Successfully running :)"
 ```
@@ -86,5 +86,5 @@ Go to kibana UI on <http://localhost:5601/>, on the top left dropdown select dev
 Go to the browser and run the following :
 
 ```bash
-http://localhost:8085/pushToKafka?KafkaBrokerEndpoint=127.0.0.1:9092&KafkaTopic=my-test-topic&CsvFile=/home/products.csv
+<http://localhost:8085/pushToKafka?KafkaBrokerEndpoint=127.0.0.1:9092&KafkaTopic=my-test-topic&CsvFile=/home/products.csv>
 ```
