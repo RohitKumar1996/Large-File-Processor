@@ -66,21 +66,25 @@ Create a new topic with partition and replication factor of 3 :
 ```bash
 bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 3 --partitions 3 --topic my-test-topic
 ```
+Now, start the container for kafka-producer image pulled in the beginning, copy the csv file to be imported to docker container environment and test the API response using :
 
-## Usage
+```bash
+docker run --network host -p 8085:8085 {IMAGE ID}
+docker cp /{path-to-file}/products.csv {NAMES}:/home/products.csv
 
-```python
-import foobar
+Note :
+{IMAGE ID} can be found using the command - "docker images"
+{NAMES} can be found via - "docker ps"
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+http://localhost:8085/testMyAPI 
+
+The response for above URL should be "Successfully running :)"
 ```
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Go to kibana UI on <http://localhost:5601/>, on the top left dropdown select dev tools to go to the kibana console. Copy the command from create_index.txt in Elasticsearch-Commands directory in the project and run this to create the index on elasticsearch.
 
-Please make sure to update tests as appropriate.
+Go to the browser and run the following :
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+```bash
+http://localhost:8085/pushToKafka?KafkaBrokerEndpoint=127.0.0.1:9092&KafkaTopic=my-test-topic&CsvFile=/home/products.csv
+```
