@@ -42,4 +42,9 @@ public class KafkaProducerController {
 			@QueryParam("CsvFile") String CsvFile) throws JSONException {
 		return kafkaProducerService.PublishMessagesImpl(KafkaBrokerEndpoint, KafkaTopic, CsvFile);
 	}
+
+	@RequestMapping(value = "/testMyAPI", method = RequestMethod.GET)
+        public @ResponseBody String test() throws JSONException {
+                return "Successfully running :)";
+        }
 }

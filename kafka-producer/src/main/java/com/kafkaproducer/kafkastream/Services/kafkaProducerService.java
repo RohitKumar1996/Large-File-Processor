@@ -66,7 +66,7 @@ public class kafkaProducerService {
 				final ProducerRecord<String, String> jsoRecord = new ProducerRecord<String, String>(KafkaTopic, null,
 						obj.toString());
 
-				System.out.println("\n****\n" + obj.toString() + "\n****\n");
+				//System.out.println("\n****\n" + obj.toString() + "\n****\n");
 
 				CsvProducer.send(jsoRecord, (metadata, exception) -> {
 					if (metadata != null) {
