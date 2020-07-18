@@ -88,3 +88,8 @@ Go to the browser and run the following :
 ```bash
 http://localhost:8085/pushToKafka?KafkaBrokerEndpoint=127.0.0.1:9092&KafkaTopic=my-test-topic&CsvFile=/home/products.csv
 ```
+
+Now, go to kibana console and copy and run the query in check_index_data.txt in Elasticsearch-Commands project directory to check the data. 
+
+Once the indexing gets completed, run the query in create_agg_transform.txt followed by the one in create_agg_index.txt to build the aggregated index which contains product names and count of that product. This data can be validated by replacing index name in 
+check_index_data.txt query and triggering the same. 
