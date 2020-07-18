@@ -4,7 +4,7 @@ The objective of this application is to build a pipeline which is able to import
 
 ## Project setup steps
 
-pull the docker image of the kafka-producer springboot app using :
+Pull the docker image of the kafka-producer springboot app using :
 
 ```bash
 docker pull rk6991/kafka-elk-file-processor:kafka-producer
