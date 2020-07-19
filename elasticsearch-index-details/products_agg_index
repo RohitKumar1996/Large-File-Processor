@@ -1,0 +1,48 @@
+This index contains aggregated data of name and count of names field. The schema and command to create this index are as follows :
+
+1. aggregate index schema :-
+
+  "agg_products_index" : {
+    "aliases" : { },
+    "mappings" : {
+      "_meta" : {
+        "created_by" : "transform",
+        "_transform" : {
+          "transform" : "products_transform",
+          "version" : {
+            "created" : "7.8.0"
+          },
+          "creation_date_in_millis" : 1595140105711
+        }
+      },
+      "properties" : {
+        "name" : {
+          "type" : "keyword"
+        },
+        "name_count" : {
+          "type" : "long"
+        }
+      }
+    }
+    
+2. Commands to create this :-
+
+PUT _transform/products_transform
+{
+  "source": {
+    "index": "products_index"
+  },
+  "dest" : { 
+    "index" : "agg_products_index"
+  },
+  "pivot": {
+    "group_by": { 
+      "name": { "terms": { "field": "name.keyword" }}
+    },
+    "aggregations": {
+      "name_count": { "value_count": { "field": "name.keyword" }}
+    }
+  }
+}
+
+POST _transform/products_transform/_start
