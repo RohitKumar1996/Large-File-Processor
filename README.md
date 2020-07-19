@@ -55,6 +55,11 @@ bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-fac
 Clone this github repository and change the logstash volumes source path that by default is "/home/rk/Downloads/logstash-7.8.0/config/docker-logstash/" to the complete path in your local system (till the Logstash-Conf-File directory in this project like /{path}/Large-File-Processor/Logstash-Conf-File/
 ) in the docker-compose.yml
 
+Add the following binding in /etc/hosts :
+
+```bash
+127.0.0.1       elasticsearch
+```
 Now, go to the project directory and setup the ELK stack using :
 ```bash
 docker-compose up
