@@ -110,4 +110,15 @@ check_index_data.txt query and triggering the same.
 
 In this project we have created 2 indices - one for the products data (with 'sku' as the roll up field) and the second aggregated index containing name and no. of products with that name. The details such as their schema, sample data (documents in this index) along with the commands to create the index are in elasticsearch-index-fields folder in this project repository.
 
+## Points to Achieve :
+
+1. The kafka-producer springboot app follows the abstraction and encapsulation concepts of object oriented programming.
+2. There is regular non-blocking parallel ingestion of the given file into the elasticsearch index and it was imported in less than 2 minutes.
+3. I have added the support for updating existing products in the index based on 'sku' as the primary key. I achieved this in the logstash step by making sku field as the document_id.
+4. All product details have been ingested into a single index (products_index).
+5. I was able to create an aggregated index 'agg_products_index' over 'products_index' with 'name' and 'no. of products' as the columns. I had used the transform API in elasticsearch to achieve this.
+
+## What would you improve if given more days :
+
+I have used elasticsearch transform API to create the aggregate index. If given more time, I would have worked on some way to do this processing in an intermediate step and then index the aggregated result on elasticsearch. 
 
