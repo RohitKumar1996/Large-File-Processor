@@ -99,9 +99,9 @@ Now, go to kibana console and copy and run the query in check_index_data.txt in 
 Once the indexing gets completed, run the query in create_agg_transform.txt followed by the one in create_agg_index.txt to build the aggregated index which contains product names and count of that product. This data can be validated by replacing index name in 
 check_index_data.txt query and triggering the same. 
 
-#Project Output : 
+## Project Output : 
 
-![](https://ibb.co/MG61P6Z)
-![](https://ibb.co/09DkpQH)
-![](https://ibb.co/r4WXvky)
-![](https://ibb.co/bJ9FxHp)
+![](https://i.ibb.co/MG61P6Z/Screenshot-from-2020-07-19-11-44-15.png)
+![](https://i.ibb.co/09DkpQH/Screenshot-from-2020-07-19-11-57-19.png)
+![](https://i.ibb.co/r4WXvky/Screenshot-from-2020-07-19-11-59-45.png)
+![](https://i.ibb.co/bJ9FxHp/Screenshot-from-2020-07-19-12-06-14.png)
