@@ -106,3 +106,8 @@ check_index_data.txt query and triggering the same.
 - [ ] ![Screenshot from 2020-07-19 11-59-45](https://user-images.githubusercontent.com/28498767/87870327-5da3a480-c9c4-11ea-863e-87f04cb18d2b.png)
 - [ ] ![Screenshot from 2020-07-19 12-06-14](https://user-images.githubusercontent.com/28498767/87870328-5ed4d180-c9c4-11ea-80d1-ed5821539b70.png)
 
+## Elasticsearch index details : 
+
+In this project we have created 2 indices - one for the products data (with 'sku' as the roll up field) and the second containing name and no. of products with that name. The details such as their schema, sample data (documents in this index) along with the commands to create the index are in elasticsearch-index-fields folder in this project repository.
+
+
