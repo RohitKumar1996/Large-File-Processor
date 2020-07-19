@@ -1,4 +1,4 @@
-The following are the schema and command to create the products data index : 
+The following are the schema, command to create the products data index and sample documents are as follows : 
 
 1. products_index schema :-
 
@@ -124,3 +124,169 @@ PUT products_index
     }
   
 }
+
+3. products_index sample data :-
+
+
+      {
+        "_index" : "products_index",
+        "_type" : "_doc",
+        "_id" : "main-product-skin",
+        "_score" : 1.0,
+        "_source" : {
+          "name" : "Justin Stephens",
+          "@version" : "1",
+          "@timestamp" : "2020-07-19T06:12:18.336Z",
+          "description" : "Practice water view grow.",
+          "tags" : [
+            "products"
+          ],
+          "sku" : "main-product-skin"
+        }
+      },
+      {
+        "_index" : "products_index",
+        "_type" : "_doc",
+        "_id" : "instead-also-mouth",
+        "_score" : 1.0,
+        "_source" : {
+          "name" : "Sarah Nguyen",
+          "@version" : "1",
+          "@timestamp" : "2020-07-19T06:12:18.336Z",
+          "description" : "\"Affect central sense prepare option spend imagine produce. Read according south front address. Area player our agree yeah not.",
+          "tags" : [
+            "products"
+          ],
+          "sku" : "instead-also-mouth"
+        }
+      },
+      {
+        "_index" : "products_index",
+        "_type" : "_doc",
+        "_id" : "candidate-soon",
+        "_score" : 1.0,
+        "_source" : {
+          "name" : "Aaron Marshall",
+          "@version" : "1",
+          "@timestamp" : "2020-07-19T06:12:18.385Z",
+          "description" : "\"Quality sometimes contain certainly. About pick large figure break. Detail almost number know political American Republican.",
+          "tags" : [
+            "products"
+          ],
+          "sku" : "candidate-soon"
+        }
+      },
+      {
+        "_index" : "products_index",
+        "_type" : "_doc",
+        "_id" : "fight-reduce-friend",
+        "_score" : 1.0,
+        "_source" : {
+          "name" : "Kathleen Arroyo",
+          "@version" : "1",
+          "@timestamp" : "2020-07-19T06:12:18.391Z",
+          "description" : "Me politics common key close evidence perhaps. Attorney design tax media son little American statement. You sit certainly back more peace instead.",
+          "tags" : [
+            "products"
+          ],
+          "sku" : "fight-reduce-friend"
+        }
+      },
+      {
+        "_index" : "products_index",
+        "_type" : "_doc",
+        "_id" : "family-role-long",
+        "_score" : 1.0,
+        "_source" : {
+          "name" : "Elizabeth Anderson",
+          "@version" : "1",
+          "@timestamp" : "2020-07-19T06:12:18.391Z",
+          "description" : "\"Sign door store rock. Remember ground home wall none evening. Thank hospital treat stay international itself.",
+          "tags" : [
+            "products"
+          ],
+          "sku" : "family-role-long"
+        }
+      },
+      {
+        "_index" : "products_index",
+        "_type" : "_doc",
+        "_id" : "pick-wait-class",
+        "_score" : 1.0,
+        "_source" : {
+          "name" : "Rachel Glass",
+          "@version" : "1",
+          "@timestamp" : "2020-07-19T06:12:18.391Z",
+          "description" : "\"Your between recognize return item. Relate question arm. Industry range lose else major feel network.",
+          "tags" : [
+            "products"
+          ],
+          "sku" : "pick-wait-class"
+        }
+      },
+      {
+        "_index" : "products_index",
+        "_type" : "_doc",
+        "_id" : "brother-space",
+        "_score" : 1.0,
+        "_source" : {
+          "name" : "Beth Curtis",
+          "@version" : "1",
+          "@timestamp" : "2020-07-19T06:12:18.391Z",
+          "description" : "Present heart people fast shoulder. Partner learn try kitchen foot student best.",
+          "tags" : [
+            "products"
+          ],
+          "sku" : "brother-space"
+        }
+      },
+      {
+        "_index" : "products_index",
+        "_type" : "_doc",
+        "_id" : "ground-from-carry",
+        "_score" : 1.0,
+        "_source" : {
+          "name" : "Janice Elliott",
+          "@version" : "1",
+          "@timestamp" : "2020-07-19T06:12:18.392Z",
+          "description" : "\"Three local laugh run. Hour detail nature election question figure too property.",
+          "tags" : [
+            "products"
+          ],
+          "sku" : "ground-from-carry"
+        }
+      },
+      {
+        "_index" : "products_index",
+        "_type" : "_doc",
+        "_id" : "cut-that-use-case",
+        "_score" : 1.0,
+        "_source" : {
+          "name" : "Lisa Paul",
+          "@version" : "1",
+          "@timestamp" : "2020-07-19T06:12:18.392Z",
+          "description" : "\"Stop special yes media determine. Usually along main enjoy boy world case.",
+          "tags" : [
+            "products"
+          ],
+          "sku" : "cut-that-use-case"
+        }
+      },
+      {
+        "_index" : "products_index",
+        "_type" : "_doc",
+        "_id" : "moment-him",
+        "_score" : 1.0,
+        "_source" : {
+          "name" : "Annette Mckinney",
+          "@version" : "1",
+          "@timestamp" : "2020-07-19T06:12:18.392Z",
+          "description" : "\"Citizen center between or dinner. Congress wind before past.",
+          "tags" : [
+            "products"
+          ],
+          "sku" : "moment-him"
+        }
+      }
+
+
