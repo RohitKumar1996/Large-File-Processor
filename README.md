@@ -101,7 +101,8 @@ check_index_data.txt query and triggering the same.
 
 ## Project Output : 
 
-![](https://i.ibb.co/MG61P6Z/Screenshot-from-2020-07-19-11-44-15.png?raw=true)
-![](https://i.ibb.co/09DkpQH/Screenshot-from-2020-07-19-11-57-19.png?raw=true)
-![](https://i.ibb.co/r4WXvky/Screenshot-from-2020-07-19-11-59-45.png?raw=true)
-![](https://i.ibb.co/bJ9FxHp/Screenshot-from-2020-07-19-12-06-14.png?raw=true)
+- [ ] ![Screenshot from 2020-07-19 11-44-15](https://user-images.githubusercontent.com/28498767/87870325-5b414a80-c9c4-11ea-9d79-7d28bcceb216.png)
+- [ ] ![Screenshot from 2020-07-19 11-57-19](https://user-images.githubusercontent.com/28498767/87870326-5d0b0e00-c9c4-11ea-9dd6-47282973b363.png)
+- [ ] ![Screenshot from 2020-07-19 11-59-45](https://user-images.githubusercontent.com/28498767/87870327-5da3a480-c9c4-11ea-863e-87f04cb18d2b.png)
+- [ ] ![Screenshot from 2020-07-19 12-06-14](https://user-images.githubusercontent.com/28498767/87870328-5ed4d180-c9c4-11ea-80d1-ed5821539b70.png)
+
