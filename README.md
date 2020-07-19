@@ -101,7 +101,7 @@ check_index_data.txt query and triggering the same.
 
 ## Project Output : 
 
-![](https://i.ibb.co/MG61P6Z/Screenshot-from-2020-07-19-11-44-15.png)
-![](https://i.ibb.co/09DkpQH/Screenshot-from-2020-07-19-11-57-19.png)
-![](https://i.ibb.co/r4WXvky/Screenshot-from-2020-07-19-11-59-45.png)
-![](https://i.ibb.co/bJ9FxHp/Screenshot-from-2020-07-19-12-06-14.png)
+![](https://i.ibb.co/MG61P6Z/Screenshot-from-2020-07-19-11-44-15.png?raw=true)
+![](https://i.ibb.co/09DkpQH/Screenshot-from-2020-07-19-11-57-19.png?raw=true)
+![](https://i.ibb.co/r4WXvky/Screenshot-from-2020-07-19-11-59-45.png?raw=true)
+![](https://i.ibb.co/bJ9FxHp/Screenshot-from-2020-07-19-12-06-14.png?raw=true)
