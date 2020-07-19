@@ -108,6 +108,6 @@ check_index_data.txt query and triggering the same.
 
 ## Elasticsearch index details : 
 
-In this project we have created 2 indices - one for the products data (with 'sku' as the roll up field) and the second containing name and no. of products with that name. The details such as their schema, sample data (documents in this index) along with the commands to create the index are in elasticsearch-index-fields folder in this project repository.
+In this project we have created 2 indices - one for the products data (with 'sku' as the roll up field) and the second aggregated index containing name and no. of products with that name. The details such as their schema, sample data (documents in this index) along with the commands to create the index are in elasticsearch-index-fields folder in this project repository.
 
 
