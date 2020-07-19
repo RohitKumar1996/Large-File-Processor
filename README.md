@@ -117,6 +117,8 @@ In this project we have created 2 indices - one for the products data (with 'sku
 3. I have added the support for updating existing products in the index based on 'sku' as the primary key. I achieved this in the logstash step by making sku field as the document_id for products_index.
 4. All product details have been ingested into a single index (products_index).
 5. I was able to create an aggregated index 'agg_products_index' over 'products_index' with 'name' and 'no. of products' as the columns. I had used the transform API in elasticsearch to achieve this.
+6. No. of entries in products_index = 466694 (no. of deleted documents = 394992)
+7. No. of entries in agg_products_index = 212748
 
 ## What would you improve if given more days :
 
