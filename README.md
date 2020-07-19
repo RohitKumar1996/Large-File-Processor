@@ -11,7 +11,7 @@ docker pull rk6991/kafka-elk-file-processor:kafka-producer
 ```
 Kafka setup :
 
-Go to <https://kafka.apache.org/quickstart>, download kafka 2.5.0 and untar-it. Next go to ~/Downloads/kafka_2.12-2.5.0 directory and do the following to establish a multi broker kafka cluster :
+Go to <https://kafka.apache.org/quickstart>, download kafka 2.5.0 and untar-it (no need to download if you already have kafka setup). Next go to ~/Downloads/kafka_2.12-2.5.0 directory and do the following to establish a multi broker kafka cluster :
 
 Make a config file for each of the brokers :
 
