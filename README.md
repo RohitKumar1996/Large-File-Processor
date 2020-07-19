@@ -114,7 +114,7 @@ In this project we have created 2 indices - one for the products data (with 'sku
 
 1. The kafka-producer springboot app follows the abstraction and encapsulation concepts of object oriented programming.
 2. There is regular non-blocking parallel ingestion of the given file into the elasticsearch index and it was imported in less than 2 minutes.
-3. I have added the support for updating existing products in the index based on 'sku' as the primary key. I achieved this in the logstash step by making sku field as the document_id.
+3. I have added the support for updating existing products in the index based on 'sku' as the primary key. I achieved this in the logstash step by making sku field as the document_id for products_index.
 4. All product details have been ingested into a single index (products_index).
 5. I was able to create an aggregated index 'agg_products_index' over 'products_index' with 'name' and 'no. of products' as the columns. I had used the transform API in elasticsearch to achieve this.
 
