@@ -31,14 +31,14 @@ public class kafkaProducerService {
 		return new KafkaProducer<String, String>(properties);
 	}
 
-	static String[] headers(String path) throws IOException {
+	private static String[] headers(String path) throws IOException {
 		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
 			return br.readLine().split(",");
 		}
 	}
 
-	public static Map<String, String> PublishMessagesImpl(String KafkaBrokerEndpoint, String KafkaTopic, String CsvFile)
-			throws JSONException {
+	private static Map<String, String> PublishMessagesToKafkaImpl(String KafkaBrokerEndpoint, String KafkaTopic,
+			String CsvFile) throws JSONException {
 		final Producer<String, String> CsvProducer = ProducerProperties(KafkaBrokerEndpoint);
 		Map<String, String> response = new HashMap<String, String>();
 
@@ -46,8 +46,6 @@ public class kafkaProducerService {
 
 			// Read headers
 			String[] headers = headers(CsvFile);
-
-//			List<Map<String, String>> result = null;
 
 			Stream<String> FileStream = Files.lines(Paths.get(CsvFile));
 
@@ -66,8 +64,6 @@ public class kafkaProducerService {
 				final ProducerRecord<String, String> jsoRecord = new ProducerRecord<String, String>(KafkaTopic, null,
 						obj.toString());
 
-				//System.out.println("\n****\n" + obj.toString() + "\n****\n");
-
 				CsvProducer.send(jsoRecord, (metadata, exception) -> {
 					if (metadata != null) {
 						System.out.println("jsonData: -> " + jsoRecord.key() + " | " + jsoRecord.value());
@@ -85,6 +81,11 @@ public class kafkaProducerService {
 		}
 
 		return response;
+	}
+
+	public static Map<String, String> PublishMessagesToKafka(String KafkaBrokerEndpoint, String KafkaTopic,
+			String CsvFile) throws JSONException {
+		return PublishMessagesToKafkaImpl(KafkaBrokerEndpoint, KafkaTopic, CsvFile);
 	}
 
 }

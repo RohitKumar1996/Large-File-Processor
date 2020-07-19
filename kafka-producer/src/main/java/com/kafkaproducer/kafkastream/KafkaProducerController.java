@@ -40,11 +40,11 @@ public class KafkaProducerController {
 	public @ResponseBody Map<String, String> PublishMessages(@Context HttpHeaders headers,
 			@QueryParam("KafkaBrokerEndpoint") String KafkaBrokerEndpoint, @QueryParam("KafkaTopic") String KafkaTopic,
 			@QueryParam("CsvFile") String CsvFile) throws JSONException {
-		return kafkaProducerService.PublishMessagesImpl(KafkaBrokerEndpoint, KafkaTopic, CsvFile);
+		return kafkaProducerService.PublishMessagesToKafka(KafkaBrokerEndpoint, KafkaTopic, CsvFile);
 	}
 
 	@RequestMapping(value = "/testMyAPI", method = RequestMethod.GET)
-        public @ResponseBody String test() throws JSONException {
-                return "Successfully running :)";
-        }
+	public @ResponseBody String test() throws JSONException {
+		return "Successfully running :)";
+	}
 }
