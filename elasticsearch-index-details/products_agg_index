@@ -1,4 +1,4 @@
-This index contains aggregated data of name and count of names field. The schema and command to create this index are as follows :
+This index contains aggregated data of name and count of names field. The schema, command to create this index and sample documents are as follows :
 
 1. aggregate index schema :-
 
@@ -46,3 +46,108 @@ PUT _transform/products_transform
 }
 
 POST _transform/products_transform/_start
+
+3. Aggregated index sample data :-
+
+
+      {
+        "_index" : "agg_products_index",
+        "_type" : "_doc",
+        "_id" : "QryDjj9NtNDioblwTBttP6sAAAAAAAAA",
+        "_score" : 1.0,
+        "_source" : {
+          "name" : "Brendan Gonzales",
+          "name_count" : 1.0
+        }
+      },
+      {
+        "_index" : "agg_products_index",
+        "_type" : "_doc",
+        "_id" : "QiVq054RGqI3_iwd6pX_-HcAAAAAAAAA",
+        "_score" : 1.0,
+        "_source" : {
+          "name" : "Brendan Green",
+          "name_count" : 1.0
+        }
+      },
+      {
+        "_index" : "agg_products_index",
+        "_type" : "_doc",
+        "_id" : "QqMFSnvbkRIQP6lZRTT8A-kAAAAAAAAA",
+        "_score" : 1.0,
+        "_source" : {
+          "name" : "Brendan Haas",
+          "name_count" : 1.0
+        }
+      },
+      {
+        "_index" : "agg_products_index",
+        "_type" : "_doc",
+        "_id" : "QgMX8lUJjB_Uh3sgs2gPHa8AAAAAAAAA",
+        "_score" : 1.0,
+        "_source" : {
+          "name" : "Brendan Hall",
+          "name_count" : 2.0
+        }
+      },
+      {
+        "_index" : "agg_products_index",
+        "_type" : "_doc",
+        "_id" : "Qu8xfueKbKAagmY4RsndhJAAAAAAAAAA",
+        "_score" : 1.0,
+        "_source" : {
+          "name" : "Brendan Hancock",
+          "name_count" : 1.0
+        }
+      },
+      {
+        "_index" : "agg_products_index",
+        "_type" : "_doc",
+        "_id" : "QhyPn1EshdPFyFCocwTZtPkAAAAAAAAA",
+        "_score" : 1.0,
+        "_source" : {
+          "name" : "Brendan Harris",
+          "name_count" : 1.0
+        }
+      },
+      {
+        "_index" : "agg_products_index",
+        "_type" : "_doc",
+        "_id" : "QjHOpdC_01CiXuh4fQoyER4AAAAAAAAA",
+        "_score" : 1.0,
+        "_source" : {
+          "name" : "Brendan Henderson",
+          "name_count" : 1.0
+        }
+      },
+      {
+        "_index" : "agg_products_index",
+        "_type" : "_doc",
+        "_id" : "QkF1ES_rQwBEKz8mRjU7PgsAAAAAAAAA",
+        "_score" : 1.0,
+        "_source" : {
+          "name" : "Brendan Henry",
+          "name_count" : 1.0
+        }
+      },
+      {
+        "_index" : "agg_products_index",
+        "_type" : "_doc",
+        "_id" : "Qh9Wg5hMtBLrujcwrZzSxSIAAAAAAAAA",
+        "_score" : 1.0,
+        "_source" : {
+          "name" : "Brendan Hernandez",
+          "name_count" : 1.0
+        }
+      },
+      {
+        "_index" : "agg_products_index",
+        "_type" : "_doc",
+        "_id" : "QnUhz3xEMngvweSNyNONOhAAAAAAAAAA",
+        "_score" : 1.0,
+        "_source" : {
+          "name" : "Brendan Hoffman",
+          "name_count" : 1.0
+        }
+      }
+
